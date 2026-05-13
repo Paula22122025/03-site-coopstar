@@ -31,18 +31,18 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
         isScrolled
-          ? "bg-white/80 backdrop-blur-md border-slate-200 py-3"
+          ? "bg-black/80 backdrop-blur-md border-blue-900/30 py-3"
           : "bg-transparent border-transparent py-5"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="bg-blue-600 p-2 rounded-lg">
+          <div className="bg-blue-800 p-2 rounded-lg">
             <Rocket className="text-white w-6 h-6" />
           </div>
           <span className={cn(
             "text-2xl font-bold tracking-tight transition-colors",
-            isScrolled ? "text-slate-900" : "text-blue-600"
+            isScrolled ? "text-white" : "text-blue-500"
           )}>
             Coopstar<span className="text-blue-400">Express</span>
           </span>
@@ -55,8 +55,8 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-500",
-                isScrolled ? "text-slate-600" : "text-slate-700"
+                "text-sm font-medium transition-colors hover:text-blue-400",
+                isScrolled ? "text-slate-300" : "text-slate-200"
               )}
             >
               {link.name}
@@ -64,7 +64,7 @@ const Navbar = () => {
           ))}
           <a
             href="tel:1150523563"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg active:scale-95"
+            className="flex items-center gap-2 bg-blue-800 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg active:scale-95 border border-blue-700"
           >
             <Phone size={16} />
             (11) 5052-3563
@@ -73,7 +73,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 text-slate-600"
+          className="md:hidden p-2 text-slate-300"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -87,14 +87,14 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-slate-100 overflow-hidden"
+            className="md:hidden bg-slate-900 border-t border-slate-800 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-slate-700 hover:text-blue-600 py-2"
+                  className="text-lg font-medium text-slate-300 hover:text-blue-400 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -102,7 +102,7 @@ const Navbar = () => {
               ))}
               <a
                 href="tel:1150523563"
-                className="flex items-center justify-center gap-2 bg-blue-600 text-white py-4 rounded-xl font-bold"
+                className="flex items-center justify-center gap-2 bg-blue-800 text-white py-4 rounded-xl font-bold"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Phone size={20} />

@@ -6,7 +6,7 @@ import { PhoneCall, MapPin, Send, MessageSquare } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-slate-900 text-white overflow-hidden relative">
+    <section id="contact" className="py-24 bg-blue-950/40 text-white overflow-hidden relative border-t border-blue-900/20">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />

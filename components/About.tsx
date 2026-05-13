@@ -21,8 +21,8 @@ const About = () => {
           <div className="relative order-2 lg:order-1">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-blue-900/30">
               <img 
-                src="https://images.unsplash.com/photo-1591033594798-33227a05780d?q=80&w=1470&auto=format&fit=crop" 
-                alt="Equipe Coopstar" 
+                src="/delivery-packages.png" 
+                alt="Pacotes de Entrega Coopstar" 
                 className="w-full h-auto opacity-90"
               />
             </div>
